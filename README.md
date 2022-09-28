@@ -1,37 +1,25 @@
-# nothingness
+# getkey
 
-This is nothing, just a template for PyPI packages
+A Python module to get the pressed key
 
 ## Installation
 
 ### From PyPI
 
 ```sh
-pip3 install nothingness
+pip3 install pygetkey
 ```
 
 ### From GitHub
 
 ```sh
-pip3 install git+https://github.com/donno2048/nothingness
+pip3 install git+https://github.com/donno2048/getkey
 ```
 
 ## Usage
 
-### Import fun from \_\_init__.py
-
 ```py
-from nothingness import fun
-```
-
-### Run \_\_main__.py
-
-```sh
-python3 -m nothingness
-```
-
-### Run main from \_\_main__.py
-
-```sh
-nothingness
+import getkey
+getkey.get_key() # Wait for a key to be pressed and return it
+getkey.get_last_key() # Don't wait for a key to be pressed and return the last pressed key (mainly for "async" loops)
 ```
